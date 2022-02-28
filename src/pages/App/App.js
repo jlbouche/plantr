@@ -1,5 +1,9 @@
 import React from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom';
+import SignupPage from "../SignupPage/SignupPage";
+import LoginPage from "../LoginPage/LoginPage";
+import ProfilePage from "../ProfilePage/ProfilePage";
+import PlantSearchPage from "../PlantSearchPage/PlantSearchPage";
 import './App.css';
 
 function App() {
@@ -26,6 +30,11 @@ function App() {
                 <Route path="/:username">
                   <div className="profile">
                     <ProfilePage user={user} handleLogout={handleLogout}/>
+                  </div>
+                </Route>
+                <Route path="/plantsearch">
+                  <div className="plantsearch">
+                    <PlantSearchPage />
                   </div>
                 </Route>
             </>
